@@ -1,0 +1,21 @@
+.user {
+    background-color: transparent;
+    border: none;
+}
+.logout {
+    width: 8rem;
+    height: 3rem;
+    color: var(--button-light-blue);
+    border: 1px solid var(--button-light-blue);
+    border-radius: 2rem;
+    background: transparent;
+}
+.button {
+    font-family: var(--font-family-atkinson);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+}
+.button:hover{
+    cursor: pointer;
+    color: var(--button-blue-hover);
+}

@@ -1,0 +1,45 @@
+.cloud{
+    pointer-events: none;
+    color: var(--color-hero-cloud-dark);
+
+}
+.cloud4 {
+    position: absolute;
+    top: 5rem;   
+    left: 2.5rem; 
+    width: 3rem;  
+    height: 3rem; 
+    color: #bae6fd;
+    opacity: 0.6; 
+    transform: rotate(12deg);
+}
+.cloud3 {
+    position: absolute;
+    top: 8rem;    
+    right: 5rem;  
+    width: 2rem; 
+    height: 2rem;  
+    color: #bfdbfe; 
+    opacity: 0.4;
+    transform: rotate(-6deg);
+}
+.cloud2{
+    position: absolute;
+    top: 15rem; 
+    left: 25%;  
+    width: 4rem; 
+    height: 4rem;
+    color: #e0f2fe; 
+    opacity: 0.3; 
+    transform: rotate(45deg);
+}
+.cloud1 {
+    position: absolute;
+    bottom: 10rem;
+    right: 2.5rem; 
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #dbeafe; 
+    opacity: 0.5;
+    transform: rotate(-12deg);
+}
