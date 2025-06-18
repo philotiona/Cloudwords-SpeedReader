@@ -1,18 +1,17 @@
 import type { ReactNode } from "react";
 import Header from "./components/Header/Header";
-import Demo from "./components/Demo/Demo";
-import Hero from "./components/Hero/Hero";
-import Discover from "./components/Discover/Discover";
+import Home from "./pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
+import Read from "./pages/Read/Read";
 
 export default function App(): ReactNode {
   return (
-    <div className="appWrapper">
-      <Header />
-      <main className="main">
-        <Hero/>
-        <Discover/>
-        <Demo />
-      </main>
-    </div>
+    <>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/read" element={<Read/>}/>
+      </Routes>
+    </>
   );
 }
