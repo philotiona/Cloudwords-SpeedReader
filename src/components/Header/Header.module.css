@@ -28,7 +28,7 @@
   align-items: center;
   padding: 1rem;
   gap: 1rem;
-  font-family: var(--font-family-pt-serif);
+  font-family: var(--font-family-inter);
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-logo);

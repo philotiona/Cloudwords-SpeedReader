@@ -1,10 +1,37 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 24rem;
-    height: 16rem;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 18rem;
+    height: auto;
     background-color: var(--color-feature-card-sky-background);
     border: 1px solid var(--color-feature-card-sky-border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    gap: .5rem;
+}
+.icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-feature-icon-sky);
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-size: var(--font-size-xl);
+    color: var(--color-heading-primary);
+    font-family: var(--font-family-atkinson);
+    font-weight: var(--font-weight-bold);
+}
+.content {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-family-atkinson);
+    color: var(--color-primary-paragraph);
+    text-align: justify;
+    line-height: var(--line-height-tight);
 }

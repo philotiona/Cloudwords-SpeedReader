@@ -9,9 +9,11 @@ interface PropTypes {
 export default function Cards({icon, title, text}: PropTypes): ReactNode {
     return(
         <div className={styles.wrapper}>
-            {icon}
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <div className={styles.icon}>
+                {icon}  
+            </div>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.content}>{text}</p>
         </div>
     )
 }

@@ -133,7 +133,7 @@ table {
   --color-text-logo: #1e293b;
 
   --font-family-inter: "Inter", sans-serif;
-  --font-family-pt-serif: "PT Serif", serif;
+  --font-family-inter: "PT Serif", serif;
   --font-family-atkinson: "Atkinson Hyperlegible", sans-serif;
   --font-family-mono: "SFMono-Regular", Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
@@ -189,7 +189,7 @@ table {
   --color-button-primary-background: #0284c7;
   --color-button-primary-hover: #0369a1;
   --color-button-primary-text: #ffffff;
-  --color-button-secondary-background:#f8fafc;
+  --color-button-secondary-background: #f8fafc;
   --color-button-secondary-hover: #e2e8f0;
   --color-button-secondary-text: #334155;
   --color-hero-title: #1e293b;
@@ -295,13 +295,12 @@ a {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
-  position: absolute;
+  height: auto;
 }
 .main {
   background: linear-gradient(to bottom right, #f0f9ff, #ffffff, #eff6ff);
   width: 100%;
-  height: 100dvh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,6 +311,7 @@ a {
   height: 100%;
   position: relative;
   overflow: hidden;
+  padding-bottom: 4rem;
 }
 .cloudWrapper {
   height: 100%;
@@ -341,13 +341,13 @@ a {
 .firstHeading {
   color: var(--color-heading-primary);
   font-size: var(--font-size-6xl);
-  font-family: var(--font-family-pt-serif);
+  font-family: var(--font-family-inter);
   font-weight: var(--font-weight-bold);
 }
 .secondHeading {
   color: var(--button-light-blue);
   font-size: var(--font-size-6xl);
-  font-family: var(--font-family-pt-serif);
+  font-family: var(--font-family-inter);
   font-weight: var(--font-weight-bold);
 }
 .ptag {
@@ -376,10 +376,19 @@ a {
   width: 100%;
   height: auto;
   background-color: var(--background-white);
+  padding-bottom: 4rem;
 }
 .titleDiscover {
   color: var(--color-heading-primary);
   font-size: var(--font-size-4xl);
-  font-family: var(--font-family-pt-serif);
+  font-family: var(--font-family-inter);
   font-weight: var(--font-weight-bold);
+}
+.techniques {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
