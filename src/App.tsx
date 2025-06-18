@@ -1,71 +1,18 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
 import Header from "./components/Header/Header";
-import Cloud from "./common/Svgs/Cloud";
-import Button from "./common/Button/Button";
-import Cards from "./components/Header/Cards/Cards";
 import Demo from "./components/Demo/Demo";
+import Hero from "./components/Hero/Hero";
+import Discover from "./components/Discover/Discover";
 
 export default function App(): ReactNode {
-  const token = localStorage.getItem("token")
-  const [logged, setLogged] = useState<boolean>(false)
-  if (token) {
-    setLogged(true)
-  }
-  return(
+  return (
     <div className="appWrapper">
-        <Header/>
-        <main className="main">
-            <section className="hero">
-                <div className="cloudWrapper">
-                    <Cloud classname="cloud4"/>
-                    <Cloud classname="cloud3"/>
-                    <Cloud classname="cloud2"/>
-                    <Cloud classname="cloud1"/>
-                </div>
-                <article className="article">
-                  <div className="h1s">
-                      <h1 className="firstHeading">Words Float</h1>
-                      <h1 className="secondHeading">Like Clouds</h1>
-                  </div>
-                  <p className="ptag">Find your reading rhythm. Just as clouds glide across the sky, <br />words here flow naturally, inviting a peaceful and profound connection with every meaning they carry.</p>
-                </article>
-                <div className="heroButtons">
-                    <Button type="button" text="Catch the Current" classname="catchCurrent" icon={
-                      <svg className="windSVG" 
-                        viewBox="0 0 24 24" 
-                        fill="currentColor"
-                        stroke="currentColor" 
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 5.5C6.25 3.70508 7.70507 2.25 9.5 2.25C11.2949 2.25 12.75 3.70507 12.75 5.5C12.75 7.29493 11.2949 8.75 9.5 8.75H3C2.58579 8.75 2.25 8.41421 2.25 8C2.25 7.58579 2.58579 7.25 3 7.25H9.5C10.4665 7.25 11.25 6.4665 11.25 5.5C11.25 4.5335 10.4665 3.75 9.5 3.75C8.5335 3.75 7.75 4.5335 7.75 5.5V5.85714C7.75 6.27136 7.41421 6.60714 7 6.60714C6.58579 6.60714 6.25 6.27136 6.25 5.85714V5.5ZM14.25 7.5C14.25 5.15279 16.1528 3.25 18.5 3.25C20.8472 3.25 22.75 5.15279 22.75 7.5C22.75 9.84721 20.8472 11.75 18.5 11.75H2C1.58579 11.75 1.25 11.4142 1.25 11C1.25 10.5858 1.58579 10.25 2 10.25H18.5C20.0188 10.25 21.25 9.01878 21.25 7.5C21.25 5.98122 20.0188 4.75 18.5 4.75C16.9812 4.75 15.75 5.98122 15.75 7.5V8C15.75 8.41421 15.4142 8.75 15 8.75C14.5858 8.75 14.25 8.41421 14.25 8V7.5ZM3.25 14C3.25 13.5858 3.58579 13.25 4 13.25H18.5C20.8472 13.25 22.75 15.1528 22.75 17.5C22.75 19.8472 20.8472 21.75 18.5 21.75C16.1528 21.75 14.25 19.8472 14.25 17.5V17C14.25 16.5858 14.5858 16.25 15 16.25C15.4142 16.25 15.75 16.5858 15.75 17V17.5C15.75 19.0188 16.9812 20.25 18.5 20.25C20.0188 20.25 21.25 19.0188 21.25 17.5C21.25 15.9812 20.0188 14.75 18.5 14.75H4C3.58579 14.75 3.25 14.4142 3.25 14Z" fill="currentColor"/>
-                      </svg>
-                    }/>
-                    {!logged && <Button type= "button" text="Join Readers" classname="joinReaders"/>}                         
-                </div>
-            </section>
-            <section className="discoverHero">
-                    <article className="article">
-                        <h1 className="titleDiscover">Reading as Natural Flow</h1>
-                        <p className="ptag">Discover techniques that work with your mind, not against it</p>          
-                    </article>
-                    <div className="techniques">
-                        <Cards 
-                          icon={<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor"><path d="M40-360v-240h140q25 0 42.5 17.5T240-540v40q0 18-10.5 33T204-444l36 84h-60l-34-80h-46v80H40Zm240 0v-60h120v-30h-80q-17 0-28.5-11.5T280-490v-70q0-17 11.5-28.5T320-600h140v60H340v30h80q17 0 28.5 11.5T460-470v70q0 17-11.5 28.5T420-360H280Zm290 0-70-240h60l40 137 40-137h60l-70 240h-60Zm150 0v-240h140q25 0 42.5 17.5T920-540v40q0 25-17.5 42.5T860-440h-80v80h-60ZM100-500h80v-40h-80v40Zm680 0h80v-40h-80v40Z"/></svg>}
-                          title="Flashing"
-                          text="Watch words appear one by one, like clouds drifting across your visual field. No eye strain, no rushing—just pure focus on meaning."
-                        />
-                        <Cards 
-                          icon={<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor"><path d="M80 0v-160h800V0H80Zm160-320h56l312-311-29-29-28-28-311 312v56Zm-80 80v-170l448-447q11-11 25.5-17t30.5-6q16 0 31 6t27 18l55 56q12 11 17.5 26t5.5 31q0 15-5.5 29.5T777-687L330-240H160Zm560-504-56-56 56 56ZM608-631l-29-29-28-28 57 57Z"/></svg>}
-                          title="Underline"   
-                          text="Highlighting words as you read, guiding your focus through the text like a path through a cloudscape. Reinforce understanding with visual anchors."/>
-                        <Cards 
-                          icon={<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor"><path d="M400-40v-80H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h200v-80h80v880h-80ZM200-200h200v-80H280v-80h120v-80H280v-80h120v-80H280v-80h120v-80H200v560Zm360-560v-80h200q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H560v-80h200v-560H560Zm0 320v-80h120v80H560Zm0-160v-80h120v80H560ZM400-480Z"/></svg>}
-                          title="Pheripheral" 
-                          text="Expand your focus to take in three words at once, with only the central word highlighted. Train your peripheral vision to capture meaning from the edges, effortlessly boosting your reading speed and span."/>
-                    </div>
-            </section>
-            <Demo/>
-        </main>
+      <Header />
+      <main className="main">
+        <Hero/>
+        <Discover/>
+        <Demo />
+      </main>
     </div>
-  )
+  );
 }
