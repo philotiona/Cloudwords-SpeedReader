@@ -114,3 +114,98 @@
     gap: 1rem;
     border: 1px solid var(--button-light-blue);
 }
+.playButton {
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    color: var(--color-background-white);
+    background: var(--button-light-blue);
+}
+.playButton:hover {
+    background: var(--button-blue-hover);
+}
+.retryButton {
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    color: var(--color-background-white);
+    background: #d1d5db;
+}
+.retryButton:hover {
+    background: #9ca3af;
+}
+.focusModeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: auto;
+    border: none;
+    color: var(--color-background-white);
+    background: var(--color-rsvp-word-text);
+    gap: 0.5rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.focusModeButton:hover {
+    background: var(--color-focus-background-start);
+}
+.readFlash {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    height: 4rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    color: var(--color-rsvp-word-text);
+    font-family: var(--font-family-atkinson);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+}
+.readUnderline {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    height: 4rem;
+    color: var(--color-rsvp-word-text);
+    font-family: var(--font-family-atkinson);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+}
+.readChunks {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    height: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    color: var(--color-rsvp-word-text);
+    font-family: var(--font-family-atkinson);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+    
+}
+.readFlash:hover, .readUnderline:hover, .readChunks:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-color: var(--color-rsvp-word-text);
+    background-color: var(--color-background-white);
+}   
