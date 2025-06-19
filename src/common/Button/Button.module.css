@@ -8,7 +8,7 @@
     color: var(--button-light-blue);
     border: 1px solid var(--button-light-blue);
     border-radius: 2rem;
-    background: transparent;
+    background:var(--color-button-primary-text);
 }
 .button {
     font-family: var(--font-family-atkinson);
@@ -17,5 +17,100 @@
 }
 .button:hover{
     cursor: pointer;
-    color: var(--button-blue-hover);
+    background-color: var(--button-blue-hover);
+}
+.catchCurrent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-light-blue);
+    color: var(--color-button-primary-text);
+    height: 4rem;
+    width: 12rem;
+    border-radius: 2rem;
+    gap: 1rem;
+    border: 1px solid var(--button-light-blue);
+}
+.joinReaders {
+    background: var(--color-button-secondary-background);
+    color: var(--color-text-navigation);
+    border: 1px solid var(--color-text-navigation);
+    height: 4rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+.joinReaders:hover {
+    background: var(--color-button-secondary-hover);                                               
+}
+.logout:hover {
+    color: var(--color-button-primary-text);
+    border: 1px solid var(--button-blue-hover);
+    background: var(--button-blue-hover);
+}
+.login {
+    border: none;
+    background: transparent;
+    height: auto;
+    width: auto;
+    padding-left: 1rem;
+    text-decoration: underline;
+}
+.login:hover {
+    color: var(--button-light-blue);
+    background: none;
+}
+.signup {
+    width: 8rem;
+    height: 3rem;
+    color: var(--color-button-primary-text) ;
+    border: 1px solid var(--button-light-blue);
+    border-radius: 2rem;
+    background-color: var(--button-light-blue);
+}
+.signup:hover {
+    background-color: var(--button-blue-hover);
+}
+.lightmodeButton {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    color: var(--color-text-paragraph);
+}
+.lightmodeButton:hover {
+    background-color: var(--color-background-white);
+    color: var(--color-text-subtle);
+}
+.darkmodeButton{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    color: var(--color-text-paragraph);
+}
+.darkmodeButton:hover {
+    background-color: var(--color-background-white);
+    color: var(--color-text-subtle);
+}
+.start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-light-blue);
+    color: var(--color-button-primary-text);
+    height: 4rem;
+    width: 12rem;
+    border-radius: 2rem;
+    gap: 1rem;
+    border: 1px solid var(--button-light-blue);
 }
