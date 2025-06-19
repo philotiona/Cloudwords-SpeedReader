@@ -1,0 +1,38 @@
+.readMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--background-app);
+}
+.readerWrap {
+    width: 80%;
+    height: auto;
+    background-color: var(--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    height: auto;
+    border: 1px solid var(--color-focus-cloud-dark);
+    background: var(--color-background-white);
+    border-radius: 1.5rem;
+    padding: 4rem;
+}
+.wordContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-guide-step-blue);
+    background-color: var(--color-focus-cloud-dark);
+    width: 90%;
+    height: 16rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.wordFlow {
+
+}

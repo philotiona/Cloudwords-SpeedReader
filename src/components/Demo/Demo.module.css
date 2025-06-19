@@ -19,7 +19,7 @@
 }
 .title {
   color: var(--color-heading-primary);
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-6xl);
   font-family: var(--font-family-inter);
   font-weight: var(--font-weight-bold);
 }
@@ -91,6 +91,7 @@ input[type="file"] {
 }
 .textarea:focus {
   border: 2px solid var(--color-guide-step-blue);
+  outline: var(--color-guide-step-blue)
 }
 .textarea::placeholder {
   color: var(--color-text-navigation);

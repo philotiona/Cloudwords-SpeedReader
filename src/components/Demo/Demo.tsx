@@ -1,7 +1,14 @@
-import type { ReactNode } from "react";
+import type { ReactNode} from "react";
 import styles from "./Demo.module.css"
 import Button from "../../common/Button/Button";
- export default function Demo(): ReactNode {
+import{ useRef } from "react"
+
+export default function Demo(): ReactNode {
+    const textareaRef = useRef<HTMLTextAreaElement>(null) 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const text = textareaRef.current?.value
+    }
     return(
         <section className={styles.wrapper}>
             <article className={styles.article}>
@@ -10,10 +17,10 @@ import Button from "../../common/Button/Button";
                     Paste your text below or drag a file to start reading.
                 </p>
             </article>
-            <form action="" className={styles.reader}>
+            <form action="" className={styles.reader} onSubmit={handleSubmit}>
                 <label htmlFor="inputText" className={styles.inputText}>
                     Paste Your Text Here:
-                    <textarea className={styles.textarea} name="inputText" id="inputText" placeholder="Type or paste your content here..."/>
+                    <textarea ref={textareaRef} className={styles.textarea} name="inputText" id="inputText" placeholder="Type or paste your content here..."/>
                 </label>
                 
                 <label htmlFor="filedrop" className={styles.filedrop}>
