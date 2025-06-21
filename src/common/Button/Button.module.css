@@ -1,116 +1,228 @@
 .user {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 .logout {
-    width: 8rem;
-    height: 3rem;
-    color: var(--button-light-blue);
-    border: 1px solid var(--button-light-blue);
-    border-radius: 2rem;
-    background:var(--color-button-primary-text);
+  width: 8rem;
+  height: 3rem;
+  color: var(--button-light-blue);
+  border: 1px solid var(--button-light-blue);
+  border-radius: 2rem;
+  background: var(--color-button-primary-text);
 }
 .button {
-    font-family: var(--font-family-atkinson);
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-atkinson);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
 }
-.button:hover{
-    cursor: pointer;
-    background-color: var(--button-blue-hover);
+.button:hover {
+  cursor: pointer;
+  background-color: var(--button-blue-hover);
 }
 .catchCurrent {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--button-light-blue);
-    color: var(--color-button-primary-text);
-    height: 4rem;
-    width: 12rem;
-    border-radius: 2rem;
-    gap: 1rem;
-    border: 1px solid var(--button-light-blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-light-blue);
+  color: var(--color-button-primary-text);
+  height: 4rem;
+  width: 12rem;
+  border-radius: 2rem;
+  gap: 1rem;
+  border: 1px solid var(--button-light-blue);
 }
 .joinReaders {
-    background: var(--color-button-secondary-background);
-    color: var(--color-text-navigation);
-    border: 1px solid var(--color-text-navigation);
-    height: 4rem;
-    width: 8rem;
-    border-radius: 2rem;
+  background: var(--color-button-secondary-background);
+  color: var(--color-text-navigation);
+  border: 1px solid var(--color-text-navigation);
+  height: 4rem;
+  width: 8rem;
+  border-radius: 2rem;
 }
 .joinReaders:hover {
-    background: var(--color-button-secondary-hover);                                               
+  background: var(--color-button-secondary-hover);
 }
 .logout:hover {
-    color: var(--color-button-primary-text);
-    border: 1px solid var(--button-blue-hover);
-    background: var(--button-blue-hover);
+  color: var(--color-button-primary-text);
+  border: 1px solid var(--button-blue-hover);
+  background: var(--button-blue-hover);
 }
 .login {
-    border: none;
-    background: transparent;
-    height: auto;
-    width: auto;
-    padding-left: 1rem;
-    text-decoration: underline;
+  border: none;
+  background: transparent;
+  height: auto;
+  width: auto;
+  padding-left: 1rem;
+  text-decoration: underline;
 }
 .login:hover {
-    color: var(--button-light-blue);
-    background: none;
+  color: var(--button-light-blue);
+  background: none;
 }
 .signup {
-    width: 8rem;
-    height: 3rem;
-    color: var(--color-button-primary-text) ;
-    border: 1px solid var(--button-light-blue);
-    border-radius: 2rem;
-    background-color: var(--button-light-blue);
+  width: 8rem;
+  height: 3rem;
+  color: var(--color-button-primary-text);
+  border: 1px solid var(--button-light-blue);
+  border-radius: 2rem;
+  background-color: var(--button-light-blue);
 }
 .signup:hover {
-    background-color: var(--button-blue-hover);
+  background-color: var(--button-blue-hover);
 }
 .lightmodeButton {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    width: 3rem;
-    height: 3rem;
-    border: none;
-    color: var(--color-text-paragraph);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  color: var(--color-text-paragraph);
 }
 .lightmodeButton:hover {
-    background-color: var(--color-background-white);
-    color: var(--color-text-subtle);
+  background-color: var(--color-background-white);
+  color: var(--color-text-subtle);
 }
-.darkmodeButton{
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    width: 3rem;
-    height: 3rem;
-    border: none;
-    color: var(--color-text-paragraph);
+.darkmodeButton {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  color: var(--color-text-paragraph);
 }
 .darkmodeButton:hover {
-    background-color: var(--color-background-white);
-    color: var(--color-text-subtle);
+  background-color: var(--color-background-white);
+  color: var(--color-text-subtle);
 }
 .start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-light-blue);
+  color: var(--color-button-primary-text);
+  height: 4rem;
+  width: 12rem;
+  border-radius: 2rem;
+  gap: 1rem;
+  border: 1px solid var(--button-light-blue);
+}
+.playButton {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  color: var(--color-background-white);
+  background: var(--button-light-blue);
+}
+.playButton:hover {
+  background: var(--button-blue-hover);
+}
+.retryButton {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  color: var(--color-background-white);
+  background: #d1d5db;
+}
+.retryButton:hover {
+  background: #9ca3af;
+}
+.focusModeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: auto;
+  border: none;
+  color: var(--color-background-white);
+  background: var(--color-rsvp-word-text);
+  gap: 0.5rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.focusModeButton:hover {
+  background: var(--color-focus-background-start);
+}
+.readFlash {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  border-top-left-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+  color: var(--color-rsvp-word-text);
+  font-family: var(--font-family-atkinson);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
+}
+.readUnderline {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  color: var(--color-rsvp-word-text);
+  font-family: var(--font-family-atkinson);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
+}
+.readChunks {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  color: var(--color-rsvp-word-text);
+  font-family: var(--font-family-atkinson);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
+}
+.readFlash:hover,
+.readUnderline:hover,
+.readChunks:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-color: var(--color-rsvp-word-text);
+  background-color: var(--color-background-white);
+}
+.readLoad {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    background-color: var(--button-light-blue);
-    color: var(--color-button-primary-text);
-    height: 4rem;
-    width: 12rem;
-    border-radius: 2rem;
-    gap: 1rem;
+    width: 14rem;
+    height: 5rem;
+    color: var(--color-rsvp-word-text);
     border: 1px solid var(--button-light-blue);
+    border-radius: 2rem;
+    background-color: var(--color-focus-cloud-dark);
+    font-size: var(--font-size-xl);
+    font-family: var(--font-family-atkinson);
+    font-weight: var(--font-weight-bold);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
