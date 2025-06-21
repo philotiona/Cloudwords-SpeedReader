@@ -3,11 +3,15 @@ import styles from "./Demo.module.css"
 import Button from "../../common/Button/Button";
 import{ useRef } from "react"
 
-export default function Demo(): ReactNode {
+interface DemoProps {
+    onSubmit: (tetx: string) => void;
+}
+export default function Demo({onSubmit}: DemoProps): ReactNode {
     const textareaRef = useRef<HTMLTextAreaElement>(null) 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const text = textareaRef.current?.value
+        const text = textareaRef.current?.value || ""
+        onSubmit(text)
     }
     return(
         <section className={styles.wrapper}>
