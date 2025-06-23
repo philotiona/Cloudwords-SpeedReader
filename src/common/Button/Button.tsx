@@ -5,8 +5,7 @@ interface PropTypes {
     type: "button" | "submit" | "reset" | undefined,
     icon?: ReactNode,
     classname: string,
-    onclick?: MouseEventHandler<HTMLButtonElement>,
-    onSubmit?: () => void 
+    onclick?: MouseEventHandler<HTMLButtonElement>, 
 }
 
 export default function Button({text, classname, icon, type, onclick}: PropTypes):ReactNode {
