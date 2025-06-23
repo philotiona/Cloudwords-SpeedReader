@@ -7,22 +7,14 @@ import { toggleDemo, setText } from "../../store/ReadingPageSlice";
 
 export default function Read(): ReactNode {
   const dispatch = useDispatch<AppDispatch>();
-  const isDemo = useSelector((state:RootState) => state.demo.demo);
-  const text = useSelector((state:RootState) => state.demo.text
-  )
-  const handleSubmitDemo = (inputText:string) => {
+  const isDemo = useSelector((state: RootState) => state.demo.demo);
+  const text = useSelector((state: RootState) => state.demo.text);
+  const onSubmit = (inputText: string) => {
+    dispatch(setText(inputText));
     dispatch(toggleDemo());
-    dispatch(setText(inputText))
-  }
+  };
 
   return (
-    <>
-      {isDemo ? 
-        <Demo onSubmit={handleSubmitDemo}/>
-        :
-        <WordFlow text={text}/>
-      }
-    
-    </>
+    <>{isDemo ? <Demo onSubmit={onSubmit} /> : <WordFlow text={text} />}</>
   );
 }

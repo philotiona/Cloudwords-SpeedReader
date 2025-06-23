@@ -105,3 +105,21 @@ input[type="file"] {
   width: 100%;
   height: auto;
 }
+.error {
+  color: #FF3333;
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-inter);
+  font-weight: var(--font-weight-medium);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.labelError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  gap: 0.5rem
+}
