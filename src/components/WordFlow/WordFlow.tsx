@@ -5,6 +5,7 @@ import Article from "../../common/Article/Article";
 import Button from "../../common/Button/Button";
 import { useDispatch } from "react-redux";
 import { toggleDemo } from "../../store/ReadingPageSlice";
+import { toggleFocus } from "../../store/FocusMode";
 
 interface WordFlowProps {
     text: string
@@ -15,6 +16,7 @@ export default function WordFlow({text}: WordFlowProps): ReactNode {
     const [index, setIndex] = useState<number>(0)
     const textArray: string[] = text.split(" ")
     const [playing, setPlaying] = useState<boolean>(false)
+    const [focusMode, setFocusMode] = useState<boolean>(false)
     const handlePlay = () => {
       setPlaying(!playing)
     }
@@ -34,7 +36,63 @@ export default function WordFlow({text}: WordFlowProps): ReactNode {
     const handleRestart =() =>  {
       setIndex(0)
     }
-    return(
+    const handleFocusMode = () => {
+      setFocusMode(true);
+      dispatch(toggleFocus())
+    }
+    return( <>
+      {focusMode ?
+       <main className={styles.readFocusMain}>
+          <div className={styles.closeContainer}>
+          
+          <Button text="" type="button" icon={<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>} classname="closeButton"/>
+          </div> 
+          <div className={styles.wordFlowFocus}>{index < textArray.length ? textArray[index] : "Load New Text or Restart"}</div>
+          <div className={styles.focusButtons}>
+            <Button
+            onclick={handlePlay}
+            type="button"
+            text=""
+            icon={
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 11L10 16H15L12 21M6 16.4438C4.22194 15.5683 3 13.7502 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 14.0582 20.206 15.4339 19 16.2417"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            }
+            classname="playButtonFocus"
+          />
+          <Button
+          onclick={handleRestart}
+            type="button"
+            text=""
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="currentColor"
+              >
+                <path d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440h80q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720h-6l62 62-56 58-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Z" />
+              </svg>
+            }
+            classname="retryButtonFocus"
+          />
+          </div>
+       </main>
+       : 
+      
       <main className={styles.readMain}>
       <Article
         classname="readArticle"
@@ -90,6 +148,7 @@ export default function WordFlow({text}: WordFlowProps): ReactNode {
             classname="retryButton"
           />
           <Button
+          onclick={handleFocusMode}
             type="button"
             text="Focus Mode"
             icon={
@@ -133,6 +192,9 @@ export default function WordFlow({text}: WordFlowProps): ReactNode {
         <span className={styles.span}>or</span>
         <Button onclick={handleLoad}type="button" text="Load New Text" icon={<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z"/></svg>} classname="readLoad"/>
       </section>
+    
     </main>
+      }
+    </>
     )
 }

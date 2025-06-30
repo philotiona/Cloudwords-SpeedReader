@@ -103,7 +103,6 @@ export default function Demo({ onSubmit }: DemoProps): ReactNode {
       reader.readAsArrayBuffer(file);
     });
   };
-
   const handleTextFile = async (file: File): Promise<void> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
