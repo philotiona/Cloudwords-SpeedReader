@@ -40,12 +40,15 @@ export default function WordFlow({text}: WordFlowProps): ReactNode {
       setFocusMode(true);
       dispatch(toggleFocus())
     }
+    const handleClose =() => {
+      setFocusMode(false)
+      dispatch(toggleFocus())
+    }
     return( <>
       {focusMode ?
        <main className={styles.readFocusMain}>
           <div className={styles.closeContainer}>
-          
-          <Button text="" type="button" icon={<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>} classname="closeButton"/>
+            <Button onclick={handleClose} text="" type="button" icon={<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>} classname="closeButton"/>
           </div> 
           <div className={styles.wordFlowFocus}>{index < textArray.length ? textArray[index] : "Load New Text or Restart"}</div>
           <div className={styles.focusButtons}>

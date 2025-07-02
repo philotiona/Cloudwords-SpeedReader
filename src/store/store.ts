@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import demoReducer from "./ReadingPageSlice"
 import focusReducer from "./FocusMode"
+import loggedReducer from "./AuthentificationSlice"
 
 export const store = configureStore({
     reducer: {
         demo: demoReducer,
-        focus: focusReducer
+        focus: focusReducer,
+        loggedIn: loggedReducer
     }
 })
 export type AppStore = typeof store

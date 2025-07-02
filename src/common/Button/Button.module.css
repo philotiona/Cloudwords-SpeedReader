@@ -1,6 +1,15 @@
 .user {
   background-color: transparent;
   border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user:hover {
+  color: var(--color-button-primary-text);
 }
 .logout {
   width: 8rem;
@@ -8,7 +17,7 @@
   color: var(--button-light-blue);
   border: 1px solid var(--button-light-blue);
   border-radius: 2rem;
-  background: var(--color-button-primary-text);
+  background: transparent;
 }
 .button {
   font-family: var(--font-family-atkinson);
@@ -55,6 +64,18 @@
   width: auto;
   padding-left: 1rem;
   text-decoration: underline;
+}
+.signin {
+  border: none;
+  background: transparent;
+  height: auto;
+  width: auto;
+  text-decoration: underline;
+  font-size: var(--font-size-large);
+}
+.signin:hover {
+  color: var(--button-light-blue);
+  background: none;
 }
 .login:hover {
   color: var(--button-light-blue);

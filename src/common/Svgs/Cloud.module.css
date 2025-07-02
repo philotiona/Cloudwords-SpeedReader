@@ -43,3 +43,23 @@
     opacity: 0.5;
     transform: rotate(-12deg);
 }
+.bigCloud {
+    position: absolute;
+    color: var(--color-focus-cloud-dark);
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    width: 7rem;
+    height: 7rem;
+      position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9rem; 
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+  opacity: 1; 
+  pointer-events: none; 
+}
