@@ -1,17 +1,14 @@
 import { useState, useEffect, type ReactNode } from "react";
 import styles from "./Header.module.css";
 import Button from "../../common/Button/Button";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store/store";
 
 export default function Header(): ReactNode {
+  const navigate = useNavigate()
   const [darkmode, setDarkmode] = useState<boolean>(false);
-  const [loggedIn, setLoggedIn] = useState<boolean>(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      setLoggedIn(true);
-    }
-  }, []);
+  const loggedIn = useSelector((state: RootState) => state.loggedIn.logged)
 
   const lightmodeSVG = (
     <svg
@@ -46,8 +43,8 @@ export default function Header(): ReactNode {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          width="48"
-          height="48"
+          width="24"
+          height="24"
         >
           <path
             fill-rule="evenodd"
@@ -86,8 +83,8 @@ export default function Header(): ReactNode {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1080 1080"
                   preserveAspectRatio="xMidYMid meet"
-                  width="50"
-                  height="50"
+                  width="48"
+                  height="48"
                 >
                   <g
                     transform="translate(0,1080) scale(0.1,-0.1)"
@@ -106,7 +103,7 @@ export default function Header(): ReactNode {
           <div className={styles.buttons}>
             <Button text="Login" classname="login" type="button" />
             <span>or</span>
-            <Button text="Sign Up" classname="signup" type="button" />
+            <Button text="Sign Up" classname="signup" type="button" onclick={() => {navigate("/signup")}}/>
           </div>
         )}
         {darkmode ? (
